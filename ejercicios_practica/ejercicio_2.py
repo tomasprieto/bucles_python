@@ -22,4 +22,24 @@ colores = ['rojo', 'naranja', 'verde', 'azul']
 # los elementos de la lista
 # for i ...
 
+
+
+for color in colores:
+    print(color)
+
+
+for x in colores[0]:
+    print(x)
+for x in colores[1]:
+    print(x)
+for x in colores[2]:
+    print(x)
+for x in colores[3]:
+    print(x)
+
+lista_color = len(colores)
+
+for i in range(lista_color):
+    print("El índice",i," color:", colores[i])
+
 print("terminamos!")
