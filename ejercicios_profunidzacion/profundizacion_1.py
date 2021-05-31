@@ -24,10 +24,17 @@ sino que va hasta el anterior.
 
 print('Comenzamos a ponernos serios!')
 # Empezar aquí la resolución del ejercicio
+inicio = int(input('Ingrese el primero número de la secuencia\n'))
+fin = int(input('Ingrese el ultimo número de la secuencia\n'))
 
-# inicio = ....
-# fin = ....
+suma = 0
 
+for i in range(inicio, fin + 1):
+    cantidad_numeros = (i - inicio + 1)
+    suma = suma + i
+
+print("La cantidad de numeros que hay es:", cantidad_numeros)
+print("La suma de todos los numeros es:", suma)
 # cantidad_numeros ....
 # sumatoria ....
 
@@ -37,3 +44,4 @@ print('Comenzamos a ponernos serios!')
 # promedio = sumatoria / cantidad_numeros
 
 # Imprimir resultado en pantalla
+

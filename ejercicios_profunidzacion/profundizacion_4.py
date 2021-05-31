@@ -50,6 +50,37 @@ temperatura_promedio = 0    # Al finalizar el loop deberá aquí alamcenar el pr
 temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
 # Colocar el bucle aqui......
+for i in  temp_dataloger:
+    if  (temperatura_max is None) or (i > temperatura_max):
+        temperatura_max = i
+    elif (temperatura_min is None) or (i < temperatura_min):
+        temperatura_min = i
+print("la temperatura maxima es:",temperatura_max)
+print("la temperatura minima es:",temperatura_min)
+
+for x in temp_dataloger:
+    temperatura_sumatoria += x
+print("la suma de las temperaturas es:",temperatura_sumatoria)
+
+temperatura_len = len(temp_dataloger)
+print("el total de temperaturas medidas es:",temperatura_len)   
+
+temperatura_promedio = temperatura_sumatoria/ len(temp_dataloger)
+print("el promedio es:",temperatura_promedio)
+# Al finalizar el bucle compare si el valor que usted calculó para
+# temperatura_max y temperatura_min coincide con el que podría calcular
+# usando la función "max" y la función "min" de python
+# función "max" --> https://www.w3schools.com/python/ref_func_max.asp
+# función "min" --> https://www.w3schools.com/python/ref_func_min.asp
+temp_max=max(temp_dataloger)
+print("Maxima temperatura:",temp_max)
+temp_min=min(temp_dataloger)
+print("Minima temperatura:",temp_min)
+# Al finalizar el bucle debe calcular el promedio como:
+# temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
+
+suma=sum(temp_dataloger)
+print("Suma:",suma)
 
 # Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
@@ -83,3 +114,12 @@ https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-dur
 # ¿En qué época del año nos encontramos?
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
+
+if  (temp_max < 29 ) and (temp_min > 18) :
+        print("¿En qué época del año nos encontramos? En verano")
+elif (temp_max < 21 ) and (temp_min > 10) :
+        print("¿En qué época del año nos encontramos? En otoño")
+elif (temp_max < 15 ) and (temp_min > 7) :
+        print("¿En qué época del año nos encontramos? En invierno")
+elif (temp_max < 25 ) and (temp_min > 9) :
+        print("¿En qué época del año nos encontramos? En primavera")

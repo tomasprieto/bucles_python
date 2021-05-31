@@ -35,3 +35,30 @@ alguno de lo soportados o no es la palabra "FIN".
 
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+
+inicio = int(input('Ingrese el primer número a calcular\n'))
+fin = int(input('Ingrese el segundo número a calcular\n'))
+simbolo = str(input("Ingresar el simbolo a operar"))
+
+while True:
+   
+    if simbolo == "+":
+        sumar = (inicio + fin)
+        print("La suma es:", sumar)
+    elif simbolo == "-":
+          restar = (inicio - fin)
+        print("La resta es:", restar)
+    elif simbolo == "*":
+        multiplicacion = (inicio * fin)
+        print("La multiplicacion es:", multiplicacion)
+    elif simbolo == "/":
+        division = (inicio / fin)
+        print("La division es", division)
+    elif simbolo == "**":
+        potencia = (inicio ** fin)
+        print("La potencia es:", potencia)
+    else:
+       print("Error")
+    if simbolo == "FIN":
+        print("Se apaga la calculadora")
+        break
